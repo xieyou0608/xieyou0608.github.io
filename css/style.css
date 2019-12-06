@@ -39,12 +39,12 @@ a{
 
 
 .carousel .carousel-item {
-    height: 500px;
+    height: 550px;
 }
   
 .carousel .carousel-item img {
     min-height: 300px;
-    max-height: 600px;
+    max-height: 800px;
     object-fit: cover;
 }
 
