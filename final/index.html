@@ -1,92 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打地鼠小遊戲</title>
 
+    <!-- 引用 Google 中文字型 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- 引用自已定義的CSS -->
 
-    <title>FB留言抽獎機</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
     <div class="container">
-
-        <!-- 標題 -->
         <div class="row">
-            <div class="col">
-                <div class="jumbotron">
-                    <h1 class="display-4">FB留言抽獎機</h1>
-                </div>
-            </div>
-        </div>
-
-        <!-- 表單 -->
-        <div class="row">
-            <div class="col">
-                <h1>抽獎說明</h1>
-                <div id="guide">
-                    <p>歡迎使用FB留言抽獎機，以下為使用教學，</p>
-                    <p>※使用空格</p>
-                    <p>※目前設定不會重複中獎</p>
-                    <button id="understood" class="btn btn-primary">我明白了</button>
-                </div>
-                <!-- 產生再看一次說明按鈕的區域 -->
-                <div id="again"></div>
-            </div>
-        </div>
-
-        <!-- 表單 -->
-        <div class="row">
-            <div class="col">
-                <form id="simple_lottery">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="form-group row">
-                                <label for="prize">輸入要抽的獎品:</label>
-                                <input type="text" class="form-control" id="prize" placeholder="ex:迷克夏 鯊魚 五百元">
-                            </div>
-                            <div class="form-group row">
-                                <label for="number">輸入得獎人數:</label>
-                                <input type="text" class="form-control" id="number" placeholder="ex: 5 1 1">
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="form-group">
-                                <label for="names">填入抽獎人姓名</label>
-                                <input type="text" class="form-control" id="names" placeholder="ex. 王小明 王曉明 王小名 王筱茗 王小mean">
-                            </div>
-                        </div>
+            <div class="col-3 readme">
+                <h1>打地鼠小遊戲</h1>
+                
+                <h2>得分<span id="score">0</span></h2>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <h4>選擇難度</h4>
+                        <button class="btn btn-success" id="easy">簡單</button>
+                        <button class="btn btn-warning" id="normal">普通</button>
+                        <button class="btn btn-danger" id ="hell">地獄</button>
+                        <button class="btn btn-primary" id="heaven">天堂</button>
                     </div>
-
-
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <button id="lotgo" type="button" class="btn btn-primary">抽起來</button>
-                        </div>
+                    <div class="col-6">
+                        <button class="btn-danger" id="startBtn">start!</button>
                     </div>
-                </form>
+                </div>
+                
             </div>
-        </div>
-        <!-- 產生 結果 的區塊-->
-        <div class="row" id="result">
-        </div>
-
-        <div class="row">
             <div class="col">
-                <footer>
-                    copyright &copy; 2019 前端程式設計期末報告 資管二 謝侑均
-                </footer>
+                <div class="gameplace">
+                    <div class="hole" id="hole1">
+                        <div class="mole"></div>
+                    </div>
+                    <div class="hole" id="hole2">
+                        <div class="mole"></div>
+                    </div>
+                    <div class="hole" id="hole3">
+                        <div class="mole"></div>
+                    </div>
+                    <div class="hole" id="hole4">
+                        <div class="mole"></div>
+                    </div>
+                    <div class="hole" id="hole5">
+                        <div class="mole"></div>
+                    </div>
+                    <div class="hole" id="hole6">
+                        <div class="mole"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -100,7 +77,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- 引用自己寫的 js -->
-    <script src="./js/math.js"></script>
     <script src="./js/lottery.js"></script>
 </body>
 
