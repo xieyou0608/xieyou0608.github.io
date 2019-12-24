@@ -86,7 +86,11 @@
   }
   
   .hole.up .mole {
-    top:0;
+    top:0px;
+  }
+
+  .hole.heaven .mole{
+      top: -100px;
   }
 
   .btnNow{

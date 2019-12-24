@@ -6,12 +6,14 @@ $(() => {
     let t1 = 500
     let t2 = 1000
 
+    eleCSS = 'up';
+
     var clearBtn = () =>{
         $('#easy').removeClass("btnNow")
         $('#normal').removeClass("btnNow")
         $('#hell').removeClass("btnNow")
         $('#heaven').removeClass("btnNow")
-
+        eleCSS = 'up';
     }
 
     $('#easy').on('click',()=>{
@@ -33,10 +35,11 @@ $(() => {
         $('#hell').addClass("btnNow")
     })
     $('#heaven').on('click',()=>{
-        t1 = 100
-        t2 = 150
+        t1 = 600
+        t2 = 1000
         clearBtn();
         $('#heaven').addClass("btnNow")
+        eleCSS = 'heaven';
     })
 
 
@@ -72,9 +75,9 @@ $(() => {
     var peepOut = () => {
         const time = randomTime(t1, t2);
         const hole = randomHole(holes);
-        hole.classList.add('up')
+        hole.classList.add(eleCSS)
         setTimeout(() => {
-            hole.classList.remove('up');
+            hole.classList.remove(eleCSS);
             if (!timeUp) {
                 peepOut();
             }
@@ -86,37 +89,37 @@ $(() => {
     let score = 0;
 
     $('#hole1').on('click', () => {
-        if ($('#hole1').hasClass('up')) {
+        if ($('#hole1').hasClass(eleCSS)) {
             score++;
         }
         $('#score').text(score)
     })
     $('#hole2').on('click', () => {
-        if ($('#hole2').hasClass('up')) {
+        if ($('#hole2').hasClass(eleCSS)) {
             score++;
         }
         $('#score').text(score)
     })
     $('#hole3').on('click', () => {
-        if ($('#hole3').hasClass('up')) {
+        if ($('#hole3').hasClass(eleCSS)) {
             score++;
         }
         $('#score').text(score)
     })
     $('#hole4').on('click', () => {
-        if ($('#hole4').hasClass('up')) {
+        if ($('#hole4').hasClass(eleCSS)) {
             score++;
         }
         $('#score').text(score)
     })
     $('#hole5').on('click', () => {
-        if ($('#hole5').hasClass('up')) {
+        if ($('#hole5').hasClass(eleCSS)) {
             score++;
         }
         $('#score').text(score)
     })
     $('#hole6').on('click', () => {
-        if ($('#hole6').hasClass('up')) {
+        if ($('#hole6').hasClass(eleCSS)) {
             score++;
         }
         $('#score').text(score)
