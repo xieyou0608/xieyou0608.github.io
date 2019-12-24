@@ -3,6 +3,43 @@ $(() => {
     const moles = $('.mole');
     const scoreBoard = $('#score');
 
+    let t1 = 500
+    let t2 = 1000
+
+    var clearBtn = () =>{
+        $('#easy').removeClass("btnNow")
+        $('#normal').removeClass("btnNow")
+        $('#hell').removeClass("btnNow")
+        $('#heaven').removeClass("btnNow")
+
+    }
+
+    $('#easy').on('click',()=>{
+        t1 = 1000
+        t2 = 1200
+        clearBtn();
+        $('#easy').addClass("btnNow")
+    })
+    $('#normal').on('click',()=>{
+        t1 = 600
+        t2 = 1000
+        clearBtn();
+        $('#normal').addClass("btnNow")
+    })
+    $('#hell').on('click',()=>{
+        t1 = 200
+        t2 = 300
+        clearBtn();
+        $('#hell').addClass("btnNow")
+    })
+    $('#heaven').on('click',()=>{
+        t1 = 100
+        t2 = 150
+        clearBtn();
+        $('#heaven').addClass("btnNow")
+    })
+
+
     var startGame = () => {
         score = 0
         scoreBoard.textContent = score;
@@ -33,7 +70,7 @@ $(() => {
     //讓地鼠出現
     let timeUp = false;
     var peepOut = () => {
-        const time = randomTime(800, 1000);
+        const time = randomTime(t1, t2);
         const hole = randomHole(holes);
         hole.classList.add('up')
         setTimeout(() => {
