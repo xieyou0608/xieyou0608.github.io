@@ -1,5 +1,8 @@
 # xieyou0608.github.io
 
+## Nav
+響應式導覽列  
+連結會跳到每個段落的大標
 ## About Me
 簡單放上經歷
 ## Services
