@@ -35,8 +35,8 @@ $(() => {
         $('#hell').addClass("btnNow")
     })
     $('#heaven').on('click',()=>{
-        t1 = 600
-        t2 = 1000
+        t1 = 300
+        t2 = 600
         clearBtn();
         $('#heaven').addClass("btnNow")
         eleCSS = 'heaven';
